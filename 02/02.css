@@ -1,0 +1,108 @@
+/* * : 전체에 적용, section : 선택한 부분에 적용, ul : body-ul에 적용
+    이런 식으로 태그를 적고 {중괄호}로 묶으면 적용됨.
+*/
+
+body {
+    background-color: darkseagreen;
+    color: darkgreen;
+}
+
+header {
+    background-color: rgb(195, 212, 218);
+}
+
+h2 {
+    color: brown;
+}
+
+/* .클래스명 : 해당 클래스에 적용 */
+.c2 {
+    background-color: beige;
+}
+
+/* 계층구조 상 ID 바로 아래에 h2 존재. 그럴 땐 > 사용해서 계층 내려가기 */
+#d1 > h2 {
+    color: cornsilk;
+}
+
+header > ul > li {
+    color: darkgreen;
+    /* 점 없애기 */
+    list-style: none;
+    /* 글씨 간격 늘리기 */
+    margin: 5px;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    /* 이미지 동그랗게 */
+    border-radius: 100px;
+}
+
+/* alt 속성을 가진 이미지만 다르게 지정. */
+/* [alt=html] {} 로 alt 속성 중에서도 지정 가능 */
+/* 다중 선택 : [alt=html], [alt=css] {} */
+img[alt] {
+    width: 100px;
+    height: 100px;
+}
+
+/* a 태그에만 적용됨-현재 instagram은 적용 안 됨 */
+a {
+    /* 밑줄 삭제 */
+    text-decoration: none;
+    color: darkgreen;
+    /* 하이라이트(a태그)-HTML, CSS, JS ...의 박스 넓이 지정 */
+    padding: 5px;
+}
+
+/* 하이퍼링크에 마우스가 올라갔을 때만 다르게 지정 */
+/* a : 가상클래스 selector */
+a:hover {
+    color :chocolate;
+    background-color: beige;
+}
+
+article {
+    /* 가장자리에 박스 만들기 >> 박스형식으로 만들면 margin, padding 사용 가능*/
+    border: 3px solid rgb(156, 143, 84);
+    /* border 바깥 상하좌우의 여백 */
+    margin: 15px;
+    /* border 안쪽 상하좌우의 여백 */
+    padding: 15px;
+    /* 
+    픽셀을 4개 지정 : 15px 10px 15px 10px >> 상 우 하 좌 순서대로(시계방향) 적용
+    픽섹을 2개 지정 : 15px 10px >> 상하 15px 좌우 10px 순서대로 적용 */
+}
+
+header {
+    /* mylogo와 ul(HTML, CSS, ...)을 나란히 놓기 */
+    display: flex;
+    /* 헤더 내용을 좌우에서 가운데로 정렬-center, 우측 정렬-end */
+    justify-content: center;
+    /* 헤더 내용을 상하에서 가운데로 정렬, 위로 정렬-start, 아래로 정렬-end */
+    align-items: center;
+    /* 헤더 상하 높이 지정 */
+    height: 50px;
+}
+
+div, ul {
+    margin: 15px;
+    display: flex;
+}
+
+/* 미디어 쿼리  min 또는 max -width
+width에 따라서 양식을 다시 지정할 수 있음
+: 모바일, 태블릿 환경에서의 양식 새로 지정 가능 */
+@media screen and (max-width : 1024px){
+    body {
+        background-color: rgb(rgb(81, 138, 88), green, blue);
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        background-color: cornsilk;
+    }
+}

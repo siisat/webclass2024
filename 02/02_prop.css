@@ -1,0 +1,124 @@
+
+* {
+    margin: 0px;
+    padding: 0px; 
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  #content {
+    background-color: aliceblue;
+    padding: 20px;
+  }
+
+  header {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  header > div, header > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header > div {
+    font-size: xx-large;
+    font-weight: bold;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  header > ul {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 20px;
+  }
+  
+  header li {
+    /* list style은 ul에 적용해도 됨 */
+    list-style: none;
+    /* inline flex 적용 : 글자 길이에 따라 박스 길이 달라짐 */
+    display: inline-flex;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:royalblue;
+  }
+  
+  /* li가 아니라 a에 hover를 적용하면 하이퍼링크가 있는 만큼만 색깔이 바뀜 */
+  header li:hover {
+    background-color: coral;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+   
+  article , section {
+    margin: 30px;
+  }
+  
+  h1 {
+    font-size: x-large;
+    margin-bottom: 20px;
+    /* text align : 블럭 안에서 글씨만 가운데정렬 */
+    text-align: center;
+  }
+  
+  article {
+    padding: 40px;
+  }
+  
+  section {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  section > div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  section p {
+    margin-left: 50px;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  footer {
+     background-color: black;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding: 20px;
+     font-size: small;
+  }
+  
+  
+  /* 미디어쿼리 */
+  @media screen and (min-width: 1280px) {
+    #content {
+      /* 화면 넓이 1280px보다 클 때는 content 박스가 80% 차지. 하늘색 박스 옆으로 흰 여백 생김. */
+      /* 1280px보다 작아지면 100% 차지. 주변에 흰 여백 없어짐. */
+      width: 80%;
+    }
+    header {
+      /* 화면 넓이가 커지면 소프트웨어융합~ 이랑 html, css ...이 가로로 배열 */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }

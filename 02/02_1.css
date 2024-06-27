@@ -1,0 +1,86 @@
+
+
+
+header {
+    /* 헤더 내용을 좌우에서 가운데로 정렬-center, 우측 정렬-end */
+    /* justify-content: center; */
+    /* 헤더 내용을 상하에서 가운데로 정렬, 위로 정렬-start, 아래로 정렬-end */
+    /* align-items: center; */
+    /* 헤더 상하 높이 지정 */
+    height: 150px;
+    /* background-color: aquamarine; */
+    margin: 20px;
+    padding: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+}
+
+header > ul > li {
+    list-style: none;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(36, 154, 209);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+article {
+    margin: 50px 20px 20px 20px;
+    padding: 15px;
+}
+
+body {
+    background-color: rgb(194, 219, 231);
+    color: rgb(0, 0, 0);
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    /* display: flex; */
+}
+section > div {
+    display: flex;
+}
+
+section > div > p {
+    padding: 10px;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    margin: 20px;
+    padding: 20px 50px;
+}
+
+
+@media screen and (max-width : 1024px){
+    body {
+        background-color: rgb(194, 219, 231);
+        color: rgb(0, 0, 0);
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 150px;
+    }
+    a {
+        justify-content: end;
+    }
+}
