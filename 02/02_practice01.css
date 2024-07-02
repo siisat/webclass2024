@@ -1,0 +1,16 @@
+body {
+    justify-content: center;
+}
+
+header > h1 {
+    color: white;
+    background-color: dodgerblue;
+    font-size: larger;
+    height: 30px;
+}
+
+header > div {
+    color: white;
+    background-color: rgb(231, 83, 37);
+    justify-content: end;
+}
