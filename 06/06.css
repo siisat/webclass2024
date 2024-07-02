@@ -1,0 +1,24 @@
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.group > div {
+    margin: 3px;
+}
+
+/* 그냥 input {} 해도 됨. type으로 특정 가능 */
+input[type=number] {
+    height: 30px;
+}
+
+button {
+    height: 35px;
+    border-radius: 5px;
+}
