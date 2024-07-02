@@ -1,0 +1,33 @@
+
+h1{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+img {
+    width: 180px;
+    height: 180px;
+}
+
+button {
+    background-color: deepskyblue;
+    width: 65px;
+    margin: 3px;
+    display: inline-flex;
+}
+
+#divContent > div {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+#divContent > div > div {
+    margin: 10px;
+}
+
+#msg {
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
