@@ -1,4 +1,4 @@
-
+//08.js 배열 오브젝트 : 과일 배열을 만들고 특정 과일만 다른 요소로 변환하거나 삭제
 document.addEventListener('DOMContentLoaded', ()=>{
     const txt1 = document.querySelector('#txt1');
     const btAdds = document.querySelectorAll('.btAdd');

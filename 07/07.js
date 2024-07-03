@@ -14,25 +14,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     console.log(txt1.value);
     console.log(txt1.value.length);
+
+    //.charAt(숫자) : 숫자-인덱스 위치의 문자를 반환
     console.log(txt1.value.charAt(0)); //txt1의 첫 글자 출력
     for(let c of txt1.value) { //txt1를 한글자씩 출력
         console.log(c)
     }
 
-    //뒤집어서 출력 (1)
+    //뒤집어서 출력 (1) : for문 사용
     let tm = '';
-    for(let i=txt1.value.length -1; i>=0; i--) { //txt1의 뒤에서부터 순회
+    for(let i=txt1.value.length -1 ; i>=0; i--) { //txt1의 뒤에서부터 순회
         tm = tm + txt1.value[i]; //txt1을 뒤집어서 출력
     }
     console.log(tm);
 
-
     //문자열 변경 -> 공백 제거한 버전으로 사용
     let txt = txt1.value.replaceAll(' ', '');
     
-    //뒤집어서 출력 (2)
-    //tm = txt.value.split('')... 아님! value 들어가면 오류남
+    //뒤집어서 출력 (2) : split(), reverse() 사용
     tm = txt.split('').reverse().join('');
+        //tm = txt.value.split('')... 아님! value 들어가면 오류남
     //split('') 쪼개기 : 배열로 만듦. 부산역 -> ['부','산','역']
     //reverse() 뒤집기 : ['역','산','부']
     //join() 합치기(defalut=쉼표) : 역,산,부
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let sum = 0;
     for(let c of txt1.value) {
         //isNaN : txt1이 숫자인지 확인, 숫자면 false
-        if(!isNaN(c)) {
+        if(!isNaN(c)) { // !isNaN(변수) : 변수가 숫자이면
             sum = sum + parseInt(c);
         }
     }

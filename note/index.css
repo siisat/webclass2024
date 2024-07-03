@@ -1,0 +1,83 @@
+header, section, #divContent, .c1 {
+    /* main 안에 header가 있으면 main 넓이의 100%를 차지 */
+    width: 100%;
+    height: 40px;
+    background-color: khaki;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+
+    /* 내용 나란히 놓기 */
+    display: flex;
+    /* 내용 위아래로 놓기 */
+    flex-direction: column;
+
+    /* 좌우에서 가운데로 정렬-center, 우측 정렬-end */
+    justify-content: center;
+    /* 상하에서 가운데로 정렬, 위로 정렬-start, 아래로 정렬-end */
+    align-items: center;
+    /* text-align : 글씨만 가운데 정렬 */
+    text-align: center;
+    
+    /* 여백 */
+    margin: 10px;
+    padding: 20px;
+    /* 
+    픽셀을 4개 지정 : 15px 10px 15px 10px >> 상 우 하 좌 순서대로(시계방향) 적용
+    픽섹을 2개 지정 : 15px 10px >> 상하 15px 좌우 10px 순서대로 적용 */
+
+    /* 가장자리 박스 그리기, dotted, solid 추가 가능 */
+    border: 1px dotted gray;
+}
+
+a { /* 하이퍼링크 */
+    text-decoration: none; /* 밑줄 삭제 */
+    color: white;
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+a:hover { /* 마우스 커서 올라갔을 때 */
+    background-color: white;
+    color: black;
+  }
+
+img { /* 이미지 */
+    width: 120px;
+    height: 120px;
+    border-radius: 100px; /* 가장자리 동그랗게 */
+}
+
+.sp0, .sp1, .sp2, .sp3, .sp3, .sp4 { 
+    border-radius: 50%; /* 09장 로또 공모양 */
+}
+.sp0 { /* 이런 식으로 sp0~4까지 색깔 다르게 지정 */
+    background-color: rgb(233, 123, 123);
+}
+
+/* 미디어 쿼리  min 또는 max -width
+width에 따라서 양식을 다시 지정할 수 있음
+: 모바일, 태블릿 환경에서의 양식 새로 지정 가능 */
+@media screen and (max-width : 1024px){
+    body {
+        background-color: rgb(rgb(81, 138, 88), green, blue);
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        background-color: cornsilk;
+    }
+}
+
+/*
+divContent 바로 밑에 div가 없기 때문에
+#divContent > div 로 하면 div에는 적용 안 됨
+#divContent div {} 로 하면 바로 밑에 div가 없어도 적용됨
+ */
+
+/* 그냥 input {} 해도 됨. type으로 특정 가능 */
+input[type=number] {
+    height: 30px;
+}
