@@ -1,5 +1,6 @@
 
 h1{
+    /* text-align : 글씨만 가운데 정렬 */
     text-align: center;
     margin-bottom: 5px;
 }
