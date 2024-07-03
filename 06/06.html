@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>단위환산</title>
+  <title>업다운게임</title>
   <script src='./06.js'></script>
   <link rel='stylesheet' type='text/css' href='../index.css'>
   <link rel='stylesheet' type='text/css' href='./06.css'> 
@@ -14,24 +14,32 @@
   <main>
     <header>
       <h1>자바스크립트 기초</h1>
+      <!-- <a href='주소/위치'>링크 달 글자</a> : 하이퍼링크  -->
       <div><a href="../index.html">홈</a></div>
     </header>
     <section>
       <div id='divTitle'>
         업다운 게임
       </div>
-
+      <!-- id는 중복 불가 -->
       <div id='divContent'>
         <p>
+            <!-- <img src="파일 위치/파일명"> : 이미지 -->
             <img src="../img/04_1/what.png">
         </p>
+        <!-- class는 중복 가능 -->
         <div class="group">
             <form>
             <div class="n1">
+            <!-- <input> : 입력창 -->
+              <!-- type='' : 타입을 number/text 지정 가능 -->
+              <!-- placeholder='' : 입력창 안에 뜨는 텍스트 -->
             <input type='number' id='number1' placeholder="숫자를 입력하세요">
             </div>
             <div>
+                <!-- button : 버튼 추가-->
                 <button id="btok">확인</button>
+                <!-- type='' : 버튼 타입 지정 가능. reset하면 초기화 -->
                 <button id="btcl" type="reset">취소</button>
             </div>
             </form>

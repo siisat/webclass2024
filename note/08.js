@@ -23,24 +23,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     //추가 버튼
     for(let bt of btAdds) {
         bt.addEventListener('click', ()=>{
-            // if(bt.textContent == '사과') {
-            //     arr.push('🍎');
-            // }
-            // else if(bt.textContent == '바나나') {
-            //     arr.push('🍌');
-            // }
-            // else if(bt.textContent == '오렌지') {
-            //     arr.push('🍊');
-            // }
-            // else if(bt.textContent == '수박') {
-            //     arr.push('🍉');
-            // }
-            // console.log(arr);
-
             //.push : 배열 맨 뒤에 항목 추가
             //obj[key] == key의 쌍인 value
-            arr.push(obj[bt.textContent]); //if문을 오브젝트로 대체
-
+            arr.push(obj[bt.textContent]);
+            
             //.join() : 배열 합치기. default는 쉼표로 구분해서 합침.
             txt1.value = arr.join(' '); //텍스트창에 배열 표시
         });
@@ -52,12 +38,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
             //삭제 버튼의 '삭제'를 없애서 키워드만 남기기
             //.replace('A', 'B') : A를 B로 대체하기
             const btkey = bt.textContent.replace('삭제', '');
-            //let tm = arr.filter((item)=>{return item != obj[btkey]});
-                //item이 하나일 때 () 생략, return문이 하나일 때 return과 {} 생략
+
             // .filter(변수 => 조건식) : 조건식을 만족하는 변수만 남김
             arr = arr.filter(item => item != obj[btkey]);
-
-            // console.log(arr);
+            
+            //필터링한 배열을 띄움
             txt1.value = arr.join(' ');
         });
     }
@@ -71,8 +56,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
             //item == obj[w1] : item(arr 배열의 항목)이 w1과 같으면
             //obj[w2] : item  : w2로 교체
-            //arr = arr.map((item) => {return item == obj[w1] ? obj[w2] : item});
-                //(), return{} 생략 버전
             arr = arr.map(item => item == obj[w1] ? obj[w2] : item);
 
             txt1.value = arr.join(' ');

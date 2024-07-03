@@ -1,0 +1,57 @@
+<!-- 01~09 html 필기 정리 (05는 따로 정리) -->
+<!-- !입력 후 Tab -->
+<!DOCTYPE html>
+<html lang="ko"> <!-- 언어는 ko -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 탭에 뜨는 이름 -->
+  <title>단위환산</title>
+  <!-- js, css 연결하기 (파일 위치 중요) -->
+  <script src='./07.js'></script>
+  <link rel='stylesheet' type='text/css' href='../index.css'>
+  <link rel='stylesheet' type='text/css' href='./07.css'> 
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>자바스크립트 기초</h1>
+      <div><a href="../index.html">홈</a></div>
+    </header>
+    <section>
+      <div id='divTitle'>
+        자바스크립트 문자열
+      </div>
+      <!-- id는 중복 불가 / class는 중복 가능 -->
+      <div id='divContent'>
+        <p>
+            <!-- <img src="파일 위치/파일명"> : 이미지 -->
+            <img src="../img/04_1/what.png">
+        </p>
+        <form>
+        <div>
+            <!-- <input> : 입력창 -->
+              <!-- type='' : 타입을 number/text 지정 가능 -->
+              <!-- placeholder='' : 입력창 안에 뜨는 텍스트 -->
+              <!-- readonly : 입력 막음 -->
+            <input type="text" id="txt1" placeholder="단어를 입력하세요.">
+            <input type="text" id="txt2" readonly>
+        </div>
+        <div>
+            <!-- button : 버튼 추가-->
+            <button id="bt1">회문확인</button>
+            <button id="bt2">숫자합계</button>
+            <!-- type='' : 버튼 타입 지정 가능. reset하면 초기화 -->
+            <button id="btcl" type="reset">취소</button>
+        </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+<!-- 09 : 로또 공(텍스트에 css 양식 씌운 거지만), + 기호는
+     html에 정의되어 있지 않음.
+     js 파일에서만 정의된 것도 class나 id를 이용해 양식 지정 가능 -->
