@@ -1,0 +1,25 @@
+#divContent > div {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid gainsboro; */
+}
+
+input[type=text] {
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    font-size: large;
+}
+
+button {
+    width: 20%;
+    /* flex 박스를 만들어서 여분을 줄 수 있음 */
+    display: inline-flex;
+    margin: 5px;
+}
